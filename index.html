@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: arial, sans-serif;
+            background-color: rgb(201, 232, 232);
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form_container{
+            width: auto;
+            height: 350px;
+            margin: 20px;
+            align-items: center;
+            box-shadow: 0 0 16 rgb(13, 65, 65);
+        }
+        .container{
+            margin: 20px 0;
+        } 
+
+        h3{
+            margin-top: 10px;
+            color: rgb(15, 75, 75);
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        select{
+            width: 500px;
+            padding: 10px;
+            border: 2px solid rgb(15, 75, 75);
+        }
+
+        button{
+            padding: 10px 20px;
+            background-color: #fff;
+            color: rgb(15, 75, 75);
+            border: 2px solid rgb(15, 75, 75);
+        }
+        #output{
+            margin-top: 20px;
+            padding: 10px;
+            border: 2px dashed rgb(5, 29, 29);
+            font-size: 16px;
+        }
+
+    
+    </style>
+</head>
+<body>
+    <div class="form_container">
+        <div class="container">
+            <h3>Select Bachelor </h3>
+            <select name="" id="item1">
+                <option value="Mechanical Engineering">Mechanical Engineering</option>
+                <option value="Electrical Engineering">Electrical Engineering</option>
+                <option value="Software Engineering">Software Engineering</option>
+                <option value="Computer Engineering">Computer Engineering</option>
+            </select>
+        </div>
+        <div class="container">
+            <h3>Select Bachelor </h3>
+            <select name="" id="item2">
+                <option value="MWF">MWF</option>
+                <option value="TTs">TTs</option>
+            </select>
+        </div>
+        <div class="container">
+            <h3>Select Bachelor </h3>
+            <select name="" id="item3">
+                <option value="09:00 AM to 11:00 AM">9:00 AM to 11:00 AM</option>
+                <option value="11:00 AM to 01:00 PM">11:00 AM to 01:00 PM</option>
+                <option value="03:00 PM to 05:00 PM">03:00 PM to 05:00 PM</option>
+                <option value="05:00 PM to 07:00 PM">05:00 PM to 07:00 PM</option>
+            </select>
+        </div>
+        <button onclick="submitform()">Submit</button>
+        <div id="output"></div>
+    </div>
+
+
+    <script>
+        function submitform(){
+            var item1 = document.getElementById("item1").value;
+            var item2 = document.getElementById("item2").value;
+            var item3 = document.getElementById("item3").value;
+
+        
+            if(item1 === "Mechanical Engineering" && item2 === "MWF" && item3 === "09:00 AM to 11:00 AM")  {
+                document.getElementById("output").innerHTML = "successfully student for Mechnical Engineering MWF 9 to 11";
+            } else if(item1 === "Mechanical Engineering" && item2 === "MWF" && item3 === "11:00 AM to 01:00 PM" ){
+                document.getElementById("output").innerHTML = "successfully student for Mechnical Engineering MWF 11 to 1";
+            }  else if(item1 === "Mechanical Engineering" && item2 === "MWF" && item3 === "03:00 PM to 05:00 PM" ){
+                document.getElementById("output").innerHTML = "successfully student for Mechnical Engineering MWF 3 to 5";
+            }  else if(item1 === "Mechanical Engineering" && item2 === "MWF" && item3 === "05:00 PM to 07:00 PM" ){
+                document.getElementById("output").innerHTML = "successfully student for Mechnical Engineering MWF 5 to 7"; 
+            }   
+
+            if(item1 === "Mechanical Engineering" && item2 === "TTs" && item3 === "09:00 AM to 11:00 AM")  {
+                document.getElementById("output").innerHTML = "successfully student for Mechnical Engineering TTs 9 to 11";
+            } else if(item1 === "Mechanical Engineering" && item2 === "TTs" && item3 === "11:00 AM to 01:00 PM" ){
+                document.getElementById("output").innerHTML = "successfully student for Mechnical Engineering TTs 11 to 1";
+            }  else if(item1 === "Mechanical Engineering" && item2 === "TTs" && item3 === "03:00 PM to 05:00 PM" ){
+                document.getElementById("output").innerHTML = "successfully student for Mechnical Engineering TTs 3 to 5";
+            }  else if(item1 === "Mechanical Engineering" && item2 === "TTs" && item3 === "05:00 PM to 07:00 PM" ){
+                document.getElementById("output").innerHTML = "successfully student for Mechnical Engineering TTs 5 to 7"; 
+            }   
+            
+
+            if(item1 === "Electrical Engineering" && item2 === "MWF" && item3 === "09:00 AM to 11:00 AM")  {
+                document.getElementById("output").innerHTML = "successfully student for Electrical Engineering MWF 9 to 11";
+            } else if(item1 === "Electrical Engineering" && item2 === "MWF" && item3 === "11:00 AM to 01:00 PM" ){
+                document.getElementById("output").innerHTML = "successfully student for Electrical Engineering MWF 11 to 1";
+            }  else if(item1 === "Electrical Engineering" && item2 === "MWF" && item3 === "03:00 PM to 05:00 PM" ){
+                document.getElementById("output").innerHTML = "successfully student for Electrical Engineering MWF 3 to 5";
+            }  else if(item1 === "Electrical Engineering" && item2 === "MWF" && item3 === "05:00 PM to 07:00 PM" ){
+                document.getElementById("output").innerHTML = "successfully student for Electrical Engineering MWF 5 to 7"; 
+            }   
+
+            if(item1 === "Electrical Engineering" && item2 === "TTs" && item3 === "09:00 AM to 11:00 AM")  {
+                document.getElementById("output").innerHTML = "successfully student for Electrical Engineering TTs 9 to 11";
+            } else if(item1 === "Electrical Engineering" && item2 === "TTs" && item3 === "11:00 AM to 01:00 PM" ){
+                document.getElementById("output").innerHTML = "successfully student for Electrical Engineering TTs 11 to 1";
+            }  else if(item1 === "Electrical Engineering" && item2 === "TTs" && item3 === "03:00 PM to 05:00 PM" ){
+                document.getElementById("output").innerHTML = "successfully student for Electrical Engineering TTs 3 to 5";
+            }  else if(item1 === "Electrical Engineering" && item2 === "TTs" && item3 === "05:00 PM to 07:00 PM" ){
+                document.getElementById("output").innerHTML = "successfully student for Electrical Engineering TTs 5 to 7"; 
+            } 
+            
+            
+            if(item1 === "Software Engineering" && item2 === "MWF" && item3 === "09:00 AM to 11:00 AM")  {
+                document.getElementById("output").innerHTML = "successfully student for Software Engineering MWF 9 to 11";
+            } else if(item1 === "Software Engineering" && item2 === "MWF" && item3 === "11:00 AM to 01:00 PM" ){
+                document.getElementById("output").innerHTML = "successfully student for Software Engineering MWF 11 to 1";
+            }  else if(item1 === "Software Engineering" && item2 === "MWF" && item3 === "03:00 PM to 05:00 PM" ){
+                document.getElementById("output").innerHTML = "successfully student for Software Engineering MWF 3 to 5";
+            }  else if(item1 === "Software Engineering" && item2 === "MWF" && item3 === "05:00 PM to 07:00 PM" ){
+                document.getElementById("output").innerHTML = "successfully student for Software Engineering MWF 5 to 7"; 
+            }   
+
+            if(item1 === "Software Engineering" && item2 === "TTs" && item3 === "09:00 AM to 11:00 AM")  {
+                document.getElementById("output").innerHTML = "successfully student for Software Engineering TTs 9 to 11";
+            } else if(item1 === "Software Engineering" && item2 === "TTs" && item3 === "11:00 AM to 01:00 PM" ){
+                document.getElementById("output").innerHTML = "successfully student for Software Engineering TTs 11 to 1";
+            }  else if(item1 === "Software Engineering" && item2 === "TTs" && item3 === "03:00 PM to 05:00 PM" ){
+                document.getElementById("output").innerHTML = "successfully student for Software Engineering TTs 3 to 5";
+            }  else if(item1 === "Software Engineering" && item2 === "TTs" && item3 === "05:00 PM to 07:00 PM" ){
+                document.getElementById("output").innerHTML = "successfully student for Software Engineering TTs 5 to 7"; 
+            }  
+            
+            
+            if(item1 === "Computer Engineering" && item2 === "MWF" && item3 === "09:00 AM to 11:00 AM")  {
+                document.getElementById("output").innerHTML = "successfully student for Computer Engineering MWF 9 to 11";
+            } else if(item1 === "Computer Engineering" && item2 === "MWF" && item3 === "11:00 AM to 01:00 PM" ){
+                document.getElementById("output").innerHTML = "successfully student for Computer Engineering MWF 11 to 1";
+            }  else if(item1 === "Computer Engineering" && item2 === "MWF" && item3 === "03:00 PM to 05:00 PM" ){
+                document.getElementById("output").innerHTML = "successfully student for Computer Engineering MWF 3 to 5";
+            }  else if(item1 === "Computer Engineering" && item2 === "MWF" && item3 === "05:00 PM to 07:00 PM" ){
+                document.getElementById("output").innerHTML = "successfully student for Computer Engineering MWF 5 to 7"; 
+            }   
+
+            if(item1 === "Computer Engineering" && item2 === "TTs" && item3 === "09:00 AM to 11:00 AM")  {
+                document.getElementById("output").innerHTML = "successfully student for Computer Engineering TTs 9 to 11";
+            } else if(item1 === "Computer Engineering" && item2 === "TTs" && item3 === "11:00 AM to 01:00 PM" ){
+                document.getElementById("output").innerHTML = "successfully student for Computer Engineering TTs 11 to 1";
+            }  else if(item1 === "Computer Engineering" && item2 === "TTs" && item3 === "03:00 PM to 05:00 PM" ){
+                document.getElementById("output").innerHTML = "successfully student for Computer Engineering TTs 3 to 5";
+            }  else if(item1 === "Computer Engineering" && item2 === "TTs" && item3 === "05:00 PM to 07:00 PM" ){
+                document.getElementById("output").innerHTML = "successfully student for Computer Engineering TTs 5 to 7"; 
+            }  
+        }
+    </script>
+</body>
+</html>
